@@ -70,3 +70,12 @@ window.addEventListener("scroll", function () {
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
+const tabs = document.querySelectorAll('.tab-button');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    // Optional: show related content
+  });
+});
+
