@@ -1,10 +1,26 @@
-
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('.overlay');
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+  navLinks.classList.toggle('active');
+  overlay.classList.toggle('hidden');
 });
+
+// Close menu when clicking on overlay
+overlay.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  overlay.classList.add('hidden');
+});
+
+// Close menu when clicking on a nav link (for mobile)
+navLinks.addEventListener('click', (e) => {
+  if (e.target.classList.contains('btn')) {
+    navLinks.classList.remove('active');
+    overlay.classList.add('hidden');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchIcon = document.querySelector('.icon-search');
   const searchBox = document.querySelector('.search-box');
