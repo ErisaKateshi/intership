@@ -7,13 +7,13 @@ hamburger.addEventListener('click', () => {
   overlay.classList.toggle('hidden');
 });
 
-// Close menu when clicking on overlay
+
 overlay.addEventListener('click', () => {
   navLinks.classList.remove('active');
   overlay.classList.add('hidden');
 });
 
-// Close menu when clicking on a nav link (for mobile)
+
 navLinks.addEventListener('click', (e) => {
   if (e.target.classList.contains('btn')) {
     navLinks.classList.remove('active');
@@ -93,5 +93,112 @@ tabs.forEach(tab => {
     tab.classList.add('active');
     
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+      waitForTransition: true,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 600,
+    allowTouchMove: true,
+    watchSlidesProgress: true,
+    
+    autoplayDisableOnInteraction: false,
+    
+    breakpoints: {
+      320: {
+        autoplay: {
+          delay: 1200,
+        }
+      },
+      768: {
+        autoplay: {
+          delay: 1500,
+        }
+      },
+      1024: {
+        autoplay: {
+          delay: 1800,
+        }
+      }
+    }
+  });
+
+ 
+  setTimeout(() => {
+    if (testimonialsSwiper.autoplay) {
+      testimonialsSwiper.autoplay.start();
+    }
+  }, 500);
+
+  
+  const prevButton = document.querySelector('.prev-arrow');
+  const nextButton = document.querySelector('.next-arrow');
+
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      testimonialsSwiper.slidePrev();
+      
+      setTimeout(() => {
+        testimonialsSwiper.autoplay.start();
+      }, 300);
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      testimonialsSwiper.slideNext();
+      
+      setTimeout(() => {
+        testimonialsSwiper.autoplay.start();
+      }, 300);
+    });
+  }
+
+  
+  const testimonialsSection = document.querySelector('.testimonials-section');
+  if (testimonialsSection) {
+    testimonialsSection.addEventListener('mouseenter', () => {
+      if (testimonialsSwiper.autoplay) {
+        testimonialsSwiper.autoplay.stop();
+      }
+    });
+    
+    testimonialsSection.addEventListener('mouseleave', () => {
+      if (testimonialsSwiper.autoplay) {
+        testimonialsSwiper.autoplay.start();
+      }
+    });
+  }
+
+ 
+  testimonialsSwiper.on('touchStart', function() {
+    if (testimonialsSwiper.autoplay) {
+      testimonialsSwiper.autoplay.stop();
+    }
+  });
+
+  testimonialsSwiper.on('touchEnd', function() {
+    setTimeout(() => {
+      if (testimonialsSwiper.autoplay) {
+        testimonialsSwiper.autoplay.start();
+      }
+    }, 1000);
+  });
+
+  
+  console.log('Swiper initialized with autoplay:', testimonialsSwiper.autoplay);
 });
 

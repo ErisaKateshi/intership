@@ -7,8 +7,26 @@
         <title>Projekti i pare</title>
         <link rel="stylesheet" href="style.css"/>
         <script src="https://kit.fontawesome.com/48c2b5a2e2.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+        
+        <!-- Error handling for external resources -->
+        <script>
+          
+          document.addEventListener('DOMContentLoaded', function() {
+            if (typeof FontAwesome === 'undefined') {
+              console.warn('FontAwesome failed to load, using fallback icons');
+            }
+            if (typeof Swiper === 'undefined') {
+              console.error('Swiper failed to load');
+            }
+          });
+        </script>
 
 
     </head>
@@ -39,7 +57,7 @@
       </div>
           
       <div class="search-box hidden">
-        <input type="text" placeholder="Search..." />
+        <input type="text" id="search-input" name="search" placeholder="Search..." autocomplete="off" />
       </div>   
  <div class="overlay hidden"></div>
 
@@ -147,11 +165,10 @@
       <a href="#" class="cta-button">SHOP NOW</a>
     </div>
     <div class="tab-right">
-  <a href="#"><img src="Almased_Shaker.png" class="photo img1" alt="Product 1"></a>
-  <a href="#"><img src="csm_US_Almased_Original_72ppi_RGB_1500_fd974e0336 1.png" class="photo img2" alt="Product 2"></a>
-  <a href="#"><img src="csm_US_Almased_Original_72ppi_RGB_1500_fd974e0336 1.png" class="photo img3" alt="Product 3"></a>
-</div>
-
+      <a href="#"><img src="Almased_Shaker.png" class="photo img1" alt="Product 1"></a>
+      <a href="#"><img src="csm_US_Almased_Original_72ppi_RGB_1500_fd974e0336 1.png" class="photo img2" alt="Product 2"></a>
+      <a href="#"><img src="csm_US_Almased_Original_72ppi_RGB_1500_fd974e0336 1.png" class="photo img3" alt="Product 3"></a>
+    </div>
   </div>
 </section>
 <section class="health-benefits">
@@ -177,6 +194,41 @@
   </div>
 </section>
 
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <div class="testimonials-box">
+      <div class="testimonial-left">
+        <div class="quote-text">The energy I started to have was unbelievable</div>
+        <div class="user-name">-Stephanie S</div>
+        <button class="story-button">LEARN STEPHANIE'S STORY</button>
+        <div class="navigation-arrows">
+          <div class="arrow-icon prev-arrow">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="arrow-icon next-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-right">
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="Screenshot 2025-05-20 at 9.55.40 AM 1.png" alt="Stephanie S" class="testimonial-photo">
+            </div>
+            <div class="swiper-slide">
+              <img src="Before-and-After-Picture-Almased-Stephanie.webp" alt="John D" class="testimonial-photo">
+            </div>
+            <div class="swiper-slide">
+              <img src="Success-Story-Stephanie-S-after-1.webp" alt="Maria L" class="testimonial-photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
  
 </section>

@@ -479,6 +479,12 @@ html {
 .tab-right img:hover {
   transform: scale(1.05);
 }
+
+
+.photo-carousel-box {
+  display: none;
+}
+
 .img1 {
   position: absolute;
   top: 102px;
@@ -643,6 +649,7 @@ html {
   visibility: visible;
 }
 
+/* ===== RESPONSIVE BREAKPOINTS ===== */
 
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
@@ -704,138 +711,38 @@ html {
   .wrapper {
     padding: 0 24px;
   }
+  
+  .testimonials-box {
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+  }
+  
+  .quote-text {
+    font-size: 42px;
+  }
+  
+  .user-name {
+    font-size: 22px;
+  }
+  
+  .story-button {
+    width: 280px;
+    height: 60px;
+    font-size: 18px;
+  }
 }
 
 /* Tablet (768px - 1023px) */
 @media (max-width: 1023px) and (min-width: 768px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .container {
-    padding: 0 16px;
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .header-logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 40px;
-    z-index: 1000;
-  }
-
-  .icons {
-    display: flex;
-    gap: 16px;
-    z-index: 1001;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 250px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 120px 20px;
-    gap: 20px;
-    transition: left 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    left: 0;
-  }
-  
-  .hero-carousel {
-    height: 450px;
-  }
-  
-  .hero-carousel .slide {
-    padding: 40px 16px;
-  }
-  
-  .hero-content {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-  
-  .hero-left {
-    max-width: 100%;
-    align-items: center;
-  }
-  
-  .hero-right {
-    max-width: 100%;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .hero-content .subtitle {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .hero-facts {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .hero-facts .fact {
-    width: 110px;
-    height: 110px;
-  }
-  
-  .hero-facts .fact strong {
-    font-size: 36px;
-  }
-  
-  .hero-facts .fact span:nth-child(2) {
-    font-size: 16px;
-  }
-  
-  .hero-facts .fact span:nth-child(3) {
-    font-size: 14px;
-  }
-  
-  .cta-button {
-    width: 240px;
-    height: 60px;
-    font-size: 16px;
-    margin-top: 20px;
+  .tabs-section {
+    margin-top: 80px;
   }
   
   .tabs-container {
     flex-wrap: wrap;
     gap: 12px;
+    padding: 0 20px;
   }
   
   .tab-button {
@@ -845,8 +752,7 @@ html {
   }
   
   .tab-content-box {
-    height: auto;
-    min-height: 400px;
+    margin-top: 60px;
     padding: 30px;
   }
   
@@ -862,7 +768,7 @@ html {
   }
   
   .tab-left h2 {
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
   }
   
@@ -873,7 +779,7 @@ html {
   
   .health-benefits {
     gap: 20px;
-    padding: 30px 16px;
+    padding: 30px 20px;
   }
   
   .benefit {
@@ -884,129 +790,6 @@ html {
 
 /* Mobile Large (480px - 767px) */
 @media (max-width: 767px) and (min-width: 480px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .container {
-    padding: 0 12px;
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .header-logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 35px;
-    z-index: 1000;
-  }
-
-  .icons {
-    display: flex;
-    gap: 12px;
-    z-index: 1001;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 220px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 100px 16px;
-    gap: 16px;
-    transition: left 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    left: 0;
-  }
-  
-  .btn {
-    height: 40px;
-    padding: 0 16px;
-    font-size: 16px;
-  }
-  
-  .hero-carousel {
-    height: 400px;
-  }
-  
-  .hero-carousel .slide {
-    padding: 60px 16px;
-  }
-  
-  .hero-content {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content .subtitle {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .hero-facts {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 60px;
-  }
-  
-  .hero-facts .fact {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .hero-facts .fact strong {
-    font-size: 36px;
-  }
-  
-  .hero-facts .fact span:nth-child(2) {
-    font-size: 16px;
-  }
-  
-  .hero-facts .fact span:nth-child(3) {
-    font-size: 14px;
-  }
-  
-  .cta-button {
-    width: 240px;
-    height: 60px;
-    font-size: 16px;
-    margin-top: 30px;
-  }
-  
   .tabs-section {
     margin-top: 80px;
   }
@@ -1029,6 +812,17 @@ html {
     border-radius: 16px;
   }
   
+  .tab-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .tab-left {
+    padding-left: 0;
+    padding-top: 0;
+    text-align: center;
+  }
+  
   .tab-left h2 {
     font-size: 28px;
     text-align: center;
@@ -1040,16 +834,37 @@ html {
   }
   
   .tab-right {
-    flex-direction: column;
-    gap: 16px;
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .tab-right img {
-    height: 200px;
+    height: 120px;
+    position: absolute;
   }
   
-  .img1, .img2, .img3 {
-    position: static;
+  .img1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .img2 {
+    position: absolute;
+    bottom: 140px;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  
+  .img3 {
+    position: absolute;
+    bottom: 140px;
+    left: 70%;
+    transform: translateX(-50%);
   }
   
   .health-benefits {
@@ -1067,137 +882,6 @@ html {
 
 /* Mobile Small (320px - 479px) */
 @media (max-width: 479px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 55px;
-    background-color: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .container {
-    padding: 0 10px;
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 18px;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .header-logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 30px;
-    z-index: 1000;
-  }
-
-  .icons {
-    display: flex;
-    gap: 10px;
-    z-index: 1001;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 200px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 90px 12px;
-    gap: 12px;
-    transition: left 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    left: 0;
-  }
-  
-  .btn {
-    height: 36px;
-    padding: 0 12px;
-    font-size: 14px;
-  }
-  
-  .hero-carousel {
-    height: 350px;
-  }
-  
-  .hero-carousel .slide {
-    padding: 25px 10px;
-  }
-  
-  .hero-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .hero-left {
-    max-width: 100%;
-    align-items: center;
-  }
-  
-  .hero-right {
-    max-width: 100%;
-  }
-  
-  .hero-content h1 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  
-  .hero-content .subtitle {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 12px;
-  }
-  
-  .hero-facts {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  
-  .hero-facts .fact {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .hero-facts .fact strong {
-    font-size: 22px;
-  }
-  
-  .hero-facts .fact span:nth-child(2) {
-    font-size: 12px;
-  }
-  
-  .hero-facts .fact span:nth-child(3) {
-    font-size: 10px;
-  }
-  
-  .cta-button {
-    width: 180px;
-    height: 45px;
-    font-size: 12px;
-    margin-top: 12px;
-  }
-  
   .tabs-section {
     margin-top: 60px;
   }
@@ -1220,6 +904,17 @@ html {
     border-radius: 12px;
   }
   
+  .tab-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .tab-left {
+    padding-left: 0;
+    padding-top: 0;
+    text-align: center;
+  }
+  
   .tab-left h2 {
     font-size: 24px;
     text-align: center;
@@ -1231,12 +926,37 @@ html {
   }
   
   .tab-right {
-    flex-direction: column;
-    gap: 12px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .tab-right img {
-    height: 150px;
+    height: 100px;
+    position: absolute;
+  }
+  
+  .img1 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .img2 {
+    position: absolute;
+    bottom: 115px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+  
+  .img3 {
+    position: absolute;
+    bottom: 115px;
+    left: 75%;
+    transform: translateX(-50%);
   }
   
   .health-benefits {
@@ -1259,8 +979,332 @@ html {
   .benefit p {
     font-size: 12px;
   }
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.testimonials-box {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+}
+
+.testimonial-left {
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.quote-text {
+  font-family: 'Miller Display', 'Playfair Display', serif;
+  font-size: 48px;
+  color: #238014;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.user-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 24px;
+  color: #409E31;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.story-button {
+  width: 300px;
+  height: 65px;
+  background-color: #55AB25;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  align-self: center;
+}
+
+.story-button:hover {
+  background-color: #4a9a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(85, 171, 37, 0.3);
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.arrow-icon {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid #55AB26;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #55AB26;
+  font-size: 14px;
+}
+
+.arrow-icon:hover {
+  background-color: #55AB26;
+  color: white;
+  transform: scale(1.1);
+}
+
+.arrow-icon i {
+  font-size: 12px;
+}
+
+.testimonial-right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.testimonial-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+/* ===== RESPONSIVE TESTIMONIALS ===== */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .testimonials-section {
+    padding: 60px 0;
+  }
   
-  .wrapper {
+  .testimonials-box {
+    height: 450px;
+    flex-direction: column;
+  }
+  
+  .testimonial-left {
+    flex: none;
+    padding: 30px 25px;
+    text-align: center;
+  }
+  
+  .quote-text {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-name {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .story-button {
+    width: 280px;
+    height: 60px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-right {
+    flex: 1;
+    min-height: 250px;
+  }
+  
+  .testimonial-photo {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Mobile Large (480px - 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .testimonials-section {
+    padding: 40px 0;
+  }
+  
+  .testimonials-container {
     padding: 0 12px;
   }
+  
+  .testimonials-box {
+    height: auto;
+    min-height: 600px;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  
+  .testimonial-left {
+    flex: none;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  
+  .quote-text {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .story-button {
+    width: 260px;
+    height: 55px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .navigation-arrows {
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .arrow-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .arrow-icon i {
+    font-size: 10px;
+  }
+  
+  .testimonial-right {
+    flex: 1;
+    min-height: 300px;
+    max-height: 350px;
+  }
+  
+  .testimonial-photo {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media (max-width: 479px) {
+  .testimonials-section {
+    padding: 30px 0;
+  }
+  
+  .testimonials-container {
+    padding: 0 10px;
+  }
+  
+  .testimonials-box {
+    height: auto;
+    min-height: 550px;
+    flex-direction: column;
+    border-radius: 12px;
+  }
+  
+  .testimonial-left {
+    flex: none;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  
+  .quote-text {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  
+  .user-name {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .story-button {
+    width: 240px;
+    height: 50px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .navigation-arrows {
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .arrow-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .arrow-icon i {
+    font-size: 9px;
+  }
+  
+  .testimonial-right {
+    flex: 1;
+    min-height: 250px;
+    max-height: 300px;
+  }
+  
+  .testimonial-photo {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.testimonials-swiper .swiper-button-prev,
+.testimonials-swiper .swiper-button-next {
+  display: none;
 }
