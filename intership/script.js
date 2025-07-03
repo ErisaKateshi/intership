@@ -7,13 +7,13 @@ hamburger.addEventListener('click', () => {
   overlay.classList.toggle('hidden');
 });
 
-
+// Close menu when clicking on overlay
 overlay.addEventListener('click', () => {
   navLinks.classList.remove('active');
   overlay.classList.add('hidden');
 });
 
-
+// Close menu when clicking on a nav link (for mobile)
 navLinks.addEventListener('click', (e) => {
   if (e.target.classList.contains('btn')) {
     navLinks.classList.remove('active');
@@ -95,7 +95,7 @@ tabs.forEach(tab => {
   });
 });
 
-
+// Initialize Swiper for testimonials
 document.addEventListener('DOMContentLoaded', function() {
   const testimonialsSwiper = new Swiper('.testimonials-swiper', {
     slidesPerView: 1,
@@ -114,9 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
     speed: 600,
     allowTouchMove: true,
     watchSlidesProgress: true,
-    
+    // Force autoplay to work on all devices
     autoplayDisableOnInteraction: false,
-    
+    // Responsive breakpoints with faster timing
     breakpoints: {
       320: {
         autoplay: {
@@ -136,21 +136,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
- 
+  // Ensure autoplay starts immediately
   setTimeout(() => {
     if (testimonialsSwiper.autoplay) {
       testimonialsSwiper.autoplay.start();
     }
   }, 500);
 
-  
+  // Custom navigation buttons
   const prevButton = document.querySelector('.prev-arrow');
   const nextButton = document.querySelector('.next-arrow');
 
   if (prevButton) {
     prevButton.addEventListener('click', () => {
       testimonialsSwiper.slidePrev();
-      
+      // Restart autoplay after manual navigation
       setTimeout(() => {
         testimonialsSwiper.autoplay.start();
       }, 300);
@@ -160,14 +160,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if (nextButton) {
     nextButton.addEventListener('click', () => {
       testimonialsSwiper.slideNext();
-      
+      // Restart autoplay after manual navigation
       setTimeout(() => {
         testimonialsSwiper.autoplay.start();
       }, 300);
     });
   }
 
-  
+  // Pause autoplay when user hovers over the testimonials section
   const testimonialsSection = document.querySelector('.testimonials-section');
   if (testimonialsSection) {
     testimonialsSection.addEventListener('mouseenter', () => {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
- 
+  
   testimonialsSwiper.on('touchStart', function() {
     if (testimonialsSwiper.autoplay) {
       testimonialsSwiper.autoplay.stop();
@@ -198,7 +198,61 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
   });
 
-  
+  // Debug autoplay status
   console.log('Swiper initialized with autoplay:', testimonialsSwiper.autoplay);
+});
+
+document.querySelectorAll('.carousel-arrow').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const wrapper = document.querySelector('.health-carousel-wrapper');
+    const card = wrapper.querySelector('.health-card');
+    if (!card) return;
+    const gap = 24; // match CSS gap
+    const scrollAmount = card.offsetWidth + gap;
+    if (btn.classList.contains('left')) {
+      wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  });
+});
+
+// SwiperJS for Discover Health Section
+const discoverSwiper = new Swiper('.discover-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 32,
+  navigation: {
+    nextEl: '.discover-swiper .swiper-button-next',
+    prevEl: '.discover-swiper .swiper-button-prev'
+  },
+  pagination: {
+    el: '.discover-swiper .swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    600: { slidesPerView: 1.2 },
+    900: { slidesPerView: 2.2 },
+    1200: { slidesPerView: 3.2 },
+    1440: { slidesPerView: 4 }
+  }
+});
+
+const swiper = new Swiper('.benefits-swiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1024: { slidesPerView: 3 },
+    768: { slidesPerView: 2 },
+    480: { slidesPerView: 1 }
+  }
 });
 

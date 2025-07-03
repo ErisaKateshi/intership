@@ -11,17 +11,23 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Fallback for Miller Display font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         
         <!-- Error handling for external resources -->
         <script>
-          
+          // Handle font loading errors
           document.addEventListener('DOMContentLoaded', function() {
+            // Check if FontAwesome loaded
             if (typeof FontAwesome === 'undefined') {
               console.warn('FontAwesome failed to load, using fallback icons');
             }
+            
+            // Check if Swiper loaded
             if (typeof Swiper === 'undefined') {
               console.error('Swiper failed to load');
             }
@@ -40,7 +46,7 @@
     <img src="Almased Logo.png" alt="Logo" class="header-logo"/>
 
     <nav class="nav-links">
-      <a href="#shop" class="btn">SHOP</a>
+      <a href="#shop" class="btn active">SHOP</a>
       <a href="#about" class="btn">About Almased</a>
       <a href="#science" class="btn">Science</a>
       <a href="#results" class="btn">Results</a>
@@ -51,9 +57,9 @@
     
 
       <div class="icons">
-    <a href="#" class="icon-search"><i class="fas fa-search"></i></a>
-    <a href="#" class="icon-user"><i class="fas fa-user"></i></a>
-    <a href="#" class="icon-cart"><i class="fas fa-shopping-cart"></i></a>
+    <a href="#" class="icon-search"><i class="bi bi-search header-icon"></i></a>
+    <a href="#" class="icon-user"><i class="bi bi-person header-icon"></i></a>
+    <a href="#" class="icon-cart"><i class="bi bi-cart header-icon"></i></a>
       </div>
           
       <div class="search-box hidden">
@@ -77,10 +83,8 @@
           <p class="subtitle">for optimal health</p>
           <a href="#" class="cta-button">Start Almased today →</a>
         </div>
-
-        
         <div class="hero-right">
-          <div class="hero-facts">
+          <div class="hero-facts-grid">
             <div class="fact">
               <strong>24g</strong>
               <span>high-quality</span>
@@ -116,7 +120,7 @@
           <a href="#" class="cta-button">Start Almased today →</a>
         </div>
         <div class="hero-right">
-          <div class="hero-facts">
+          <div class="hero-facts-grid">
             <div class="fact">
               <strong>All</strong>
               <span>natural</span>
@@ -149,20 +153,22 @@
     <div class="pause-icon">&#10073;&#10073;</div>
   </div>
 </section>
+
 <section class="tabs-section">
   <div class="tabs-container">
-    <button class="tab-button">+<br><span>Daily Nutrition Meal</span></button>
-    <button class="tab-button">+<br><span>Weight Loss</span></button>
-    <button class="tab-button">+<br><span>Muscle Preservation</span></button>
-    <button class="tab-button">+<br><span>Muscle Gain</span></button>
-    <button class="tab-button">+<br><span>All Health Goals</span></button>
+    <button class="tab-button"><span class="plus">+</span><br><span>Daily Nutrition Meal</span></button>
+    <button class="tab-button"><span class="plus">+</span><br><span>Weight Loss</span></button>
+    <button class="tab-button"><span class="plus">+</span><br><span>Muscle Preservation</span></button>
+    <button class="tab-button"><span class="plus">+</span><br><span>Muscle Gain</span></button>
+    <button class="tab-button"><span class="plus">+</span><br><span>All Health Goals</span></button>
   </div>
+  
 
   <div class="tab-content-box">
     <div class="tab-left">
       <h2>Get Started with your Almased<br>Welcome Pack</h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Et aenean auctor pharetra risus vel vestibulum vel. Sed pellentesque nibh arcu risus eget massa.</p>
-      <a href="#" class="cta-button">SHOP NOW</a>
+      <p>Lorem ipsum dolor sit amet consectetur. Et<br> aenean auctor pharetra risus vel vestibulum vel.<br> Sed pellentesque nibh arcu risus eget massa.</p>
+      <a href="#" class="tab-button">SHOP NOW</a>
     </div>
     <div class="tab-right">
       <a href="#"><img src="Almased_Shaker.png" class="photo img1" alt="Product 1"></a>
@@ -171,43 +177,27 @@
     </div>
   </div>
 </section>
+
 <section class="health-benefits">
-  <div class="benefit">
     <a href="#"><img src="Group 160.png" alt="Liver Detox Icon"></a>
-    <h3>Liver detox, Metabolism & Weight Management</h3>
-    <p>(Heart health, Cut appetite, Diabetes/Glp1)</p>
-  </div>
-  <div class="benefit active">
     <a href="#"><img src="Group 162.png" alt="Beauty Icon"></a>
-    <h3>Beauty & Youth</h3>
-    <p>Renewal of cells of Skin, Hair, Nails (Collagen production), HGH, biological age</p>
-  </div>
-  <div class="benefit">
     <a href="#"><img src="Group 163.png" alt="Muscle Icon"></a>
-    <h3>Muscle, Strength & Endurance.</h3>
-    <p>Workout performance</p>
-  </div>
-  <div class="benefit">
     <a href="#"><img src="Group 167.png" alt="Shake Icon"></a>
-    <h3>Quick Nutritious meal shake</h3>
-    <p>Boost energy, mental and physical performance for Busy lifestyles</p>
-  </div>
 </section>
 
-<!-- Testimonials Section -->
 <section class="testimonials-section">
   <div class="testimonials-container">
     <div class="testimonials-box">
       <div class="testimonial-left">
-        <div class="quote-text">The energy I started to have was unbelievable</div>
-        <div class="user-name">-Stephanie S</div>
+        <div class="quote-text">The energy I<br> started to have was<br> unbelievable.</div>
+        <div class="user-name">-Stephanie S.</div>
         <button class="story-button">LEARN STEPHANIE'S STORY</button>
         <div class="navigation-arrows">
           <div class="arrow-icon prev-arrow">
-            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-lefts">←</i>
           </div>
           <div class="arrow-icon next-arrow">
-            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-rights">→</i>
           </div>
         </div>
       </div>
@@ -230,12 +220,216 @@
   </div>
 </section>
 
+<section class="health-section-wrapper">
+  <h2 class="health-section-title">Discover our daily health benefits</h2>
+
+  <div class="swiper health-swiper">
+    <div class="swiper-wrapper">
+      <!-- CARD 1 -->
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="active_travel.jpg" alt="Weight Loss">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>Weight Loss</h3>
+          <p>Scientifically proven natural weight loss. Detoxes your liver from fat so your whole metabolism works better.</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="woman-size.webp" alt="GLP-1 Support">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>GLP-1 Support</h3>
+          <p>Scientifically proven to retain 100% muscle mass while losing weight.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="upon-1.webp" alt="Anti-aging">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>Anti-aging (Skin, hair)</h3>
+          <p>Use Almased for life to reduce biological age. Feel and look younger with glowing skin and healthy hair.</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="tenis1.jpg" alt="Anti-aging">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>Anti-aging (Skin, hair)</h3>
+          <p>Use Almased for life to reduce biological age. Feel and look younger with glowing skin and healthy hair.</p>
+        </div>
+      </div>
+
+      <!-- CARD 1 -->
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="active_travel.jpg" alt="Weight Loss">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>Weight Loss</h3>
+          <p>Scientifically proven natural weight loss. Detoxes your liver from fat so your whole metabolism works better.</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="woman-size.webp" alt="GLP-1 Support">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>GLP-1 Support</h3>
+          <p>Scientifically proven to retain 100% muscle mass while losing weight.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="swiper-slide health-card">
+        <div class="health-card-image">
+          <img src="upon-1.webp" alt="Anti-aging">
+          <button class="health-plus-button">+</button>
+        </div>
+        <div class="health-card-content">
+          <h3>Anti-aging (Skin, hair)</h3>
+          <p>Use Almased for life to reduce biological age. Feel and look younger with glowing skin and healthy hair.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="swiper-pagination health-pagination"></div>
+    
+    <!-- Navigation buttons positioned in bottom right corner -->
+     <div class="navigations-arrows">
+  <div class="arrows-icon prev-arrow" id="health-prev-btn">
+    <i class="fas fa-chevron-lefts">←</i>
+  </div>
+  <div class="arrows-icon next-arrow" id="health-next-btn">
+    <i class="fas fa-chevron-rights">→</i>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<script>
+  const healthSwiper = new Swiper('.health-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    grabCursor: true,
+    pagination: {
+      el: '.health-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className} custom-bullet"></span>`;
+      }
+    },
+    navigation: {
+      nextEl: '#health-next-btn',
+      prevEl: '#health-prev-btn',
+    },
+  });
+</script>
+
+
+
+<section class="metabolic-section">
+  <h2 class="metabolic-title">The Global Leader in Metabolic Health</h2>
+
+  <div class="stats-container">
+    <div class="stat-circle">
+      <h3>100%</h3>
+      <p>muscle mass<br> preservation</p>
+    </div>
+    <div class="stat-circle">
+      <h3>113%</h3>
+      <p>more weight loss<br>than a low-fat diet</p>
+    </div>
+    <div class="stat-circle">
+      <h3>86%</h3>
+      <p>more fat loss</p>
+    </div>
+    <div class="stat-circle">
+      <h3>258%</h3>
+      <p>more waist<br> reduction</p>
+    </div>
+  </div>
+
+  <p class="metabolic-paragraph">
+    No other protein compares to Almased. From balanced blood sugar to a better metabolism,<br> Almased has been shown in peer-reviewed studies to have numerous health benefits.
+  </p>
+
+  <button class="research-btn">
+    See our research studies →
+  </button>
+</section> 
+
+
+<section class="doctor-quote-section">
+  <div class="university-bar">
+    <p>Proven Results from 32 University backed Studies on Almased</p>
+    <div class="university-logos">
+      <img src="Screenshot 2025-05-15 at 9.29.43 AM.png" alt="University of Freiburg" />
+      
+    </div>
+  </div>
+
+  <div class="quotes-box">
+    <div class="quotes-left">
+      <img src="Screenshot 2025-05-15 at 9.29.36 AM.png" alt="Dr. Eric" />
+      <button class="arrow left">←</button>
+    </div>
+
+    <div class="quotes-right">
+      <p class="quotes-text">
+        <span class="quotes-mark">"</span>
+        If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat.
+        <span class="quotes-mark">"</span>
+      </p>
+      <div class="signature"><img src="Isolation_Mode.png" alt="signature"></div>
+      <div class="doctor-names">
+        <a href="#">Dr Eric J Rosenbaum</a>
+        <span>Dr Aloys Berg</span>
+      </div>
+      <button class="arrow right">→</button>
+    </div>
+  </div>
+</section>
+
  
 </section>
 
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-
+  
+<!-- Glide.js initialization script -->
+<script>
+  new Glide('.benefits-glide', {
+    type: 'carousel',
+    perView: 4,
+    gap: 24,
+    breakpoints: {
+      1024: {
+        perView: 2
+      },
+      768: {
+        perView: 1
+      }
+    }
+  }).mount();
+</script>
 
     </body>
 </html>
