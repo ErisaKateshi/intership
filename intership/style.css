@@ -1229,9 +1229,9 @@ html {
 }
 
 .quote-text::after {
-  content: "”";
-  bottom: -45px;
-  right: -30px;
+    content: "”";
+    bottom: -15px;
+    right: 174px;
 }
 
 
@@ -1576,10 +1576,10 @@ html {
 
 /* Titulli qendror */
 .health-section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #238014;
-  font-weight: 500;
+    font-size: 56px;
+    margin-bottom: 37px;
+    color: #238014;
+    font-weight: 100;
 }
 
 /* Swiper container */
@@ -1592,30 +1592,30 @@ html {
 
 /* Wrapper i swiper qe do te mbaje kartat */
 .swiper-wrapper {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 5px;
 }
 
 /* karta individuale */
 
 .swiper-slide.health-card {
-  background-color: transparent;
-  border-radius: 10px;
-  width: 280px;         
-  height: 400px;        
-  flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 315px;
+    height: 441px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Foto  */
 .health-card-image {
-  position: relative;
-  width: 100%;
-  height: 60%;           
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
 }
 
 .health-card-image img {
@@ -1628,21 +1628,21 @@ html {
 
 /* Butoni "+" jeshil */
 .health-plus-button {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background-color: #55AB26;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #55AB26;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .health-button-prev,
 .health-button-next {
@@ -1663,14 +1663,14 @@ html {
 
 /* Pjesa e perrmbajtjes e kartes */
 .health-card-content {
-  padding: 10px;
-  text-align: left;
-  background-color: #55AB26;
-  color: white;
-  height: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    padding: 7px;
+    text-align: left;
+    background-color: #55AB26;
+    color: white;
+    height: 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .health-card-content h3 {
@@ -1713,8 +1713,8 @@ html {
  
 .arrows-icon {
  
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border: 2px solid #55AB26;
   border-radius: 50%;
   display: flex;
@@ -1740,7 +1740,7 @@ html {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
-     padding: 13px; 
+    padding: 3px;
     width: 100%;
     margin: 10px 0px 0px 0px;
 }
@@ -1766,17 +1766,17 @@ html {
 
 /* ========== METABOLIC SECTION ========== */
 .metabolic-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #ffffff;
-  font-family: 'Helvetica Neue', sans-serif;
+    padding: 84px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .metabolic-title {
-  color: #238014;
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 40px;
+    color: #238014;
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 43px;
 }
 
 .stats-container {
@@ -1788,8 +1788,8 @@ html {
 }
 
 .stat-circle {
-  width: 220px;
-  height: 220px;
+  width: 280px;
+  height: 280px;
   border: 2px solid #3DAE2B;
   border-radius: 50%;
   display: flex;
@@ -1802,36 +1802,36 @@ html {
 }
 
 .stat-circle h3 {
-  font-size: 55px;
-  margin: 0;
-  font-weight: 700;
+    font-size: 64px;
+    margin: 0;
+    font-weight: 800;
 }
 
 .stat-circle p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-top: 12px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 12px;
 }
 
 .metabolic-paragraph {
-  font-size: 15px;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  color: #333;
-  line-height: 1.6;
+    font-size: 21px;
+   
+    margin: 0 auto 30px;
+    color: #333;
+    line-height: 1.6;
 }
 
 .research-btn {
-  background-color: #3DAE2B;
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background-color: #3DAE2B;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .research-btn:hover {
@@ -1839,23 +1839,18 @@ html {
 }
 
 /* ========== DOCTOR QUOTE SECTION ========== */
-.doctor-quote-section {
-  background-color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
-  padding: 0;
-}
-
 .university-bar {
-  background-color: #fff14b;
-  text-align: center;
-  padding: 16px 20px;
+    background-color: #F9F175;
+    text-align: center;
+    padding: 21px 48px;
 }
 
 .university-bar p {
-  font-size: 16px;
-  font-weight: 500;
-  color: #2b8a3e;
-  margin-bottom: 12px;
+    font-size: 27px;
+    font-weight: 400;
+    color: #238014;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .university-logos {
@@ -1867,60 +1862,132 @@ html {
 }
 
 .university-logos img {
-  max-height: 30px;
-  object-fit: contain;
+    max-height: 97px;
+    object-fit: contain;
 }
 
-/* Quote box layout */
+
+
 .quotes-box {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  padding: 40px 20px;
-  gap: 50px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 90px 116px;
+    gap: 0;
 }
 
-.quotes-left,
-.quotes-right {
-  flex: 1 1 400px;
-  max-width: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .quotes-left {
-  position: relative;
+    flex: 9 3 340px;
+    max-width: 453px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 33px !important;
 }
+
 
 .quotes-left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
+
+.quotes-right {
+    flex: 1;
+    background-color: #f1e8e6;
+    padding: 46px 48px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.quotes-text {
+    font-family: 'Miller Display', 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #2b8a3e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.quotes-text::before {
+    content: "“";
+    position: absolute;
+    top: -47px;
+    left: -45px;
+    font-size: 86px;
+    color: #2b8a3e;
+}
+
+.quotes-text::after {
+    content: "”";
+    position: absolute;
+    bottom: -52px;
+    right: 76px;
+    font-size: 86px;
+    color: #2b8a3e;
+}
+
+
+
+
+
+.signature img {
+  width: 100px;
+  margin-bottom: 12px;
+}
+
+
+.doctor-names {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 116px;
+    font-size: 19px;
+    color: #2b8a3e;
+    font-weight: 500;
+    margin-top: 18px;
+    position: relative;
+}
+
+
+.doctor-names span {
+  margin-right: 10px; 
+}
+
+.doctor-names a {
+  color: #2b8a3e;
+  text-decoration: underline;
+}
+
+
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: #3dae2b;
-  border: 2px solid #3dae2b;
-  font-size: 24px;
-  padding: 8px 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    position: absolute;
+    bottom: 30px;
+    background-color: transparent;
+    color: #3dae2b;
+    border: 2px solid #3dae2b;
+    font-size: 26px;
+    padding: 13px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .arrow.left {
-  left: -20px;
+  left: 20px;
 }
 
 .arrow.right {
-  right: -20px;
+  right: 20px;
 }
 
 .arrow:hover {
@@ -1928,53 +1995,6 @@ html {
   color: white;
 }
 
-/* Quote content */
-.quotes-right {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.quotes-text {
-  font-family: 'Miller Display', 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 400;
-  color: #2b8a3e;
-  text-align: left;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.quotes-mark {
-  font-size: 36px;
-  font-weight: bold;
-  color: #238014;
-  font-family: serif;
-  vertical-align: top;
-}
-
-.signature {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 28px;
-  color: #3dae2b;
-  margin-bottom: 12px;
-}
-
-.doctor-names {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #2b8a3e;
-}
-
-.doctor-names a {
-  color: #2b8a3e;
-  text-decoration: underline;
-}
 
 /* ========== DISCOVER HEALTH SECTION ========== */
 .discover-health-section {
