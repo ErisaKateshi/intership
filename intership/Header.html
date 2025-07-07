@@ -404,12 +404,114 @@
       <button class="arrow right">→</button>
     </div>
   </div>
+  <h2 class="Titull-title">The Natural Health & Weight loss protein shake</h2>
 </section>
 
  
 </section>
 
   <script src="script.js"></script>
+
+  <!-- Shake Recipes Section -->
+<section class="shake-recipes-section">
+  <h2 class="shake-recipes-title">
+    Taste the Difference: Three Delicious Weight Loss Shake Recipes using Almased Protein Powder
+  </h2>
+
+  <div class="swiper shake-swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide shake-card">
+        <div class="shake-image-wrapper">
+          <img src="Screenshot 2025-05-19 at 10.39.36 AM 1.png" alt="Mango Matcha Shake">
+          <div class="shake-icon">+</div>
+        </div>
+        <div class="shake-caption-wrapper">
+  <p class="shake-caption">Weight Loss Shake Recipe:<br> Mango Matcha Magic</p>
+</div>
+
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide shake-card">
+        <div class="shake-image-wrapper">
+          <img src="Screenshot 2025-05-19 at 10.39.27 AM 1.png" alt="Yogurt Blueberry Shake">
+          <div class="shake-icon">+</div>
+        </div>
+            <div class="shake-caption-wrapper">
+  <p class="shake-caption">Muscle Building Shake<br> Recipe: Yogurt-Blueberry</p>
+</div>
+        
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide shake-card">
+        <div class="shake-image-wrapper">
+          <img src="Screenshot 2025-05-19 at 10.39.18 AM 1.png" alt="Iced Coffee Shake">
+          <div class="shake-icon">+</div>
+        </div>
+            <div class="shake-caption-wrapper">
+  <p class="shake-caption">Weight Loss Shake Recipe:<br> Almased Iced Coffee Latte</p>
+</div>
+        
+      </div>
+
+    </div>
+
+    <!-- Optional: navigation arrows -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+
+
+<!-- Availability + Awards Section -->
+<section class="availability-awards-section">
+
+  <h3 class="availability-title">Also Available at</h3>
+
+  <div class="availability-logos">
+    <img src="Group 56.png" alt="CVS">
+    <img src="Amazon_logo 1.png" alt="Amazon">
+    <img src="Group 58.png" alt="Vitacost">
+    <img src="Walgreens_2020_primary_logo 1.png" alt="Walgreens">
+    <img src="instacart-2 1.png" alt="Instacart">
+    <img src="Group.png" alt="Swanson">
+  </div>
+
+  <button class="store-locator-btn">STORE LOCATOR</button>
+
+  <div class="awards-section">
+   <div class="award-center-text">
+    <p class="award-label green">Award<br>Winning...</p>
+  </div>
+    <div class="award">
+      <p><strong>Meal<br> Replacement For<br> Weight Loss</strong> </p>
+      <img src="log1.PNG" alt="logo">
+      
+    </div>
+    <div class="award">
+      <p><strong>Best<br>All-natural<br> Protein Shake<br></strong></p>
+      <img src="log2.PNG" alt="logo">
+      
+    </div>
+    <div class="award">
+      <p><strong>Top Meal<br> Replacement Shake<br> for Busy Lifestyles<br></strong></p>
+      <img src="log3.PNG" alt="logo">
+      
+    </div>
+    <div class="award">
+      <p><strong>Viable<br> intervention for<br> addressing liver fat<br></strong></p>
+      <img src="log4.PNG" alt="logo">
+      
+    </div>
+  </div>
+
+</section>
+
+
   
 <!-- Glide.js initialization script -->
 <script>
@@ -426,6 +528,30 @@
       }
     }
   }).mount();
+</script>
+
+
+
+<script>
+  const shakeSwiper = new Swiper('.shake-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      }
+    }
+  });
 </script>
 
     </body>

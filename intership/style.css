@@ -1191,12 +1191,12 @@ html {
 }
 
 .testimonial-left {
-  flex: 1;
-  padding: 50px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
+    flex: 1;
+    padding: 55px 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 /* ===================== TESTIMONIALS SECTION QUOTE ===================== */
@@ -1271,25 +1271,24 @@ html {
 
 /* = TESTIMONIALS SECTION NAVIGATION ARROWS = */
 .navigation-arrows {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    margin-top: 4px;
 }
 
 /* = TESTIMONIALS SECTION ARROW ICON = */
 .arrow-icon {
-  width: 45px;
-  height: 45px;
-  border: 2px solid #55AB26;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #55AB26;
-  background-color: transparent;
-  transition: all 0.3s ease;
+    width: 60px;
+    height: 70px;
+     border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #55AB26;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
 .arrow-icon:hover {
@@ -1995,6 +1994,16 @@ html {
   color: white;
 }
 
+.Titull-title {
+    color: #238014;
+    font-size: 47px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
 
 /* ========== DISCOVER HEALTH SECTION ========== */
 .discover-health-section {
@@ -2208,4 +2217,231 @@ html {
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10;
+}
+
+
+
+
+/* */
+.shake-recipes-section {
+  background-color: #f1e8e6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.shake-recipes-title {
+    font-size: 37px;
+    color: #238014;
+    max-width: 778px;
+    margin: 0 auto 40px;
+    line-height: 1.2;
+    font-weight: 200;
+}
+
+.shake-swiper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.shake-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.shake-image-wrapper {
+  position: relative;
+}
+
+.shake-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: 25AB26;
+}
+.shake-caption-wrapper {
+    background-color: #55AB25;
+    padding: 28px 12px;
+    text-align: left;
+}
+
+.shake-icon {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    background-color: #55AB25;
+    color: white;
+    font-size: 30px;
+    width: 32px;
+    height: 32px;
+    border-radius: 52%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    box-shadow: 0 7px 6px rgba(0,0,0,0.2);
+}
+
+.shake-caption {
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #55AB25;
+}
+
+@media (max-width: 768px) {
+  .shake-recipes-title {
+    font-size: 18px;
+  }
+
+  .shake-caption {
+    font-size: 14px;
+  }
+}
+
+
+
+/**/
+.availability-awards-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.availability-title {
+    font-weight: 100;
+    font-size: 29px;
+    color: #238014;
+    margin-bottom: 55px;
+}
+
+.availability-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 69px 255px;
+    justify-items: center;
+    margin-bottom: 74px;
+    max-width: 931px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.availability-logos img {
+  max-width: 140px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+.store-locator-btn {
+    background-color: #55AB26;
+    color: #fff;
+    padding: 11px 30px;
+    border-radius: 50px;
+    font-weight: 100;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 73px;
+    transition: background 0.3s ease;
+}
+
+.store-locator-btn:hover {
+  background-color: #3f8c1e;
+}
+
+.awards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 74px;
+    max-width: 1130px;
+    margin: 48px auto 3px -37px;
+    position: relative;
+}
+
+
+.award-center-text {
+    position: absolute;
+    left: 0;
+    bottom: 47px;
+    padding-left: 10px;
+}
+
+.award-label {
+    font-size: 26px;
+    color: #55AB25;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+
+.award-center-text .award-label {
+    font-size: 31px;
+    color: #55AB25;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    max-width: 1124px;
+    padding: 0px 115px;
+    margin-top: 53px;
+}
+
+
+
+.award {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; 
+}
+
+.award-logo {
+  width: 100px;
+  height: 30px;
+  object-fit: none;
+}
+
+.first {
+  object-position: 0 0;
+}
+
+.momjunction {
+  object-position: -110px 0;
+}
+
+.medicaldaily {
+  object-position: -220px 0;
+}
+
+.teded {
+  object-position: -330px 0;
+}
+
+
+@media (max-width: 768px) {
+  .availability-logos {
+    gap: 20px;
+  }
+
+  .awards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .award {
+    max-width: 90%;
+  }
 }
