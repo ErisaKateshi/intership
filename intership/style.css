@@ -2315,9 +2315,9 @@ html {
 
 /**/
 .availability-awards-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
+    padding: 125px 22px;
+    background-color: #fff;
+    text-align: center;
 }
 
 .availability-title {
@@ -2445,3 +2445,120 @@ html {
     max-width: 90%;
   }
 }
+
+
+.newsletter-section {
+  background-color: #D5E7B9; 
+  padding: 40px 20px;
+}
+
+.newsletter-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newsletter-label {
+    color: #238014;
+    font-size: 26px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.newsletter-title {
+    font-size: 39px;
+    color: #238014;
+    margin: 10px 0 0;
+    font-weight: 500;
+    line-height: 1.2;
+    font-weight: 100;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.newsletter-input {
+    flex: 1 1 300px;
+    padding: 8px 20px;
+    font-size: 21px;
+    border: 2px solid #55B046;
+    border-radius: 999px;
+    outline: none;
+    color: #333;
+    background-color: #D5E7B9;
+}
+
+.newsletter-button {
+    padding: 9px 54px;
+    background-color: #55AB26;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #3b8b1a;
+}
+ .footer {
+  background-color: #4c8224; 
+  padding: 60px 40px;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 60px;
+  margin-left: 100px; 
+}
+
+
+.footer-column {
+  min-width: 160px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: white;
+}
+
+.footer-column li strong {
+  font-weight: bold;
+}
+
