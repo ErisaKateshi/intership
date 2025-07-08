@@ -48,15 +48,14 @@ html {
 
 
 .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  width: 100%;
-  max-width: 1512px;
-  padding-left: 75px;
-  padding-right: 16px;
-  box-sizing: border-box;
 }
 
 
@@ -355,71 +354,64 @@ html {
 }
 
 .tabs-container {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  max-width: 100%;
-  overflow-x: auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
-.tab-button {
-    background-color: #fff;
-    color: #55AB26;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 13px 37px !important;
-    border-radius: 26px !important;
-    border: 1px solid #55AB25;
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    text-align: left;
     gap: 0px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: none;
-    text-decoration: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-bottom: 82px;
+    margin-top: -14px;
 }
-.tab-button .plus {
-  display: block;
-  text-align: left;
-  padding-left: 12px;
-  font-size: 20px;
-  line-height: 1;
-}
-
 
 .tab-button {
-  background-color: #fff; 
+  background-color: #fff;
   color: #55AB26;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
   padding: 12px 24px;
-  border-radius: 12px;
+  border-radius: 26px;
   border: 1px solid #55AB25;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  text-align: left;
-  gap: 0px;
+  align-items: center;
+  gap: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: none;
+  text-decoration: none;
+  margin-left: 16px;
 }
 
+/* Active tab */
+.tab-button.active {
+  background-color: #55AB25;
+  color: #fff;
+}
+
+/* Gray last tab style */
+.tab-button.last {
+  background-color: #f5f1ef;
+  color: #A89C95;
+  border: none;
+}
+
+
 .tab-button .plus {
-  font-size: 24px;
+  font-size: 18px;
+  margin-right: 4px;
   font-weight: bold;
   color: #55AB26;
+  
+    display: contents;
+    text-align: left;
+    padding-left: 4px;
+    font-size: 20px;
+    line-height: 1;
 }
+
 
 .tab-button:hover,
 .tab-button.active {
@@ -738,7 +730,7 @@ html {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header {
     position: fixed;
     top: 0;
@@ -2567,5 +2559,79 @@ html {
 
 .footer-column li strong {
   font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 16px;
+  }
+  .hero-carousel {
+    max-width: 1000px;
+    height: 550px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 95%;
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header {
+    height: 80px;
+  }
+  .header-placeholder {
+    height: 80px;
+  }
+  .hero-carousel {
+    max-width: 95vw;
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 100vw;
+    padding: 0 4px;
+  }
+  .header {
+    height: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 8px;
+  }
+  .header-placeholder {
+    height: 60px;
+  }
+  .hero-carousel {
+    max-width: 100vw;
+    height: 300px;
+    padding: 0 4px;
+  }
+  .nav-links {
+    gap: 16px;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .icons {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 2px;
+  }
+  .header {
+    height: 48px;
+    padding: 0 2px;
+  }
+  .header-placeholder {
+    height: 48px;
+  }
+  .hero-carousel {
+    height: 180px;
+    padding: 0 2px;
+  }
 }
 
